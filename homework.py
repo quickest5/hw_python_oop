@@ -1,5 +1,4 @@
-
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 
 min_in_hour = 60
 
@@ -52,8 +51,10 @@ class Training:
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
-        raise NotImplementedError(f'{"Обязательно нужно "}'
-                                  f"переопределить при наследовании")
+        raise NotImplementedError(
+            f'{"Обязательно нужно "}'
+            f"переопределить при наследовании"
+        )
 
     def show_training_info(self) -> InfoMessage:
         """Вернуть информационное сообщение о выполненной тренировке."""
