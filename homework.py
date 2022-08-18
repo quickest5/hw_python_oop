@@ -165,7 +165,7 @@ def read_package(workout_type: str, data: list) -> Training:
     try:
         return workout_type_dict[workout_type](*data)
     except KeyError:
-        raise KeyError("Твое сообщение об ошибке")
+        raise KeyError("Не вышло в районе read_package")
 
 
 def main(training: Training) -> None:
